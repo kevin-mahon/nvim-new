@@ -2,8 +2,17 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
+require('lspconfig').pyright.setup({
+        settings = {
+          python = {
+            analysis = {
+              typeCheckingMode = "off"
+            }
+          }
+        }
+      })
+
 lsp.ensure_installed({
-  'rust_analyzer',
   'pyright',
 })
 
@@ -57,3 +66,4 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+--python.analysis.typeCheckingMode
