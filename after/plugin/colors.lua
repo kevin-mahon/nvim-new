@@ -1,4 +1,6 @@
 -- setup must be called before loading
+--
+--
 
 function FixColors(color)
 	color = color or "tokyonight-night"
@@ -9,5 +11,3 @@ function FixColors(color)
 end
 
 FixColors()
-
-
