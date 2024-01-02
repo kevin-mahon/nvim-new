@@ -28,17 +28,19 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('tpope/vim-commentary')
-  use('eandrju/cellular-automaton.nvim')
   use('romgrk/barbar.nvim')
-  use('nvim-tree/nvim-web-devicons')
+  use('nvim-tree/nvim-web-devicons') -- barbar dependency OPTIONAL: for file icons
+  use('lewis6991/gitsigns.nvim') -- barbar dependency OPTIONAL: for git status
+  use('github/copilot.vim')
 
 
   use {
       'VonHeikemen/lsp-zero.nvim',
-      branch = 'v1.x',
+      branch = 'v3.x',
       requires = {
           -- LSP Support
           {'neovim/nvim-lspconfig'},
+          -- Language servers
           {'williamboman/mason.nvim'},
           {'williamboman/mason-lspconfig.nvim'},
 
