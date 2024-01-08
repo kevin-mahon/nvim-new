@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
   use('lewis6991/gitsigns.nvim') -- barbar dependency OPTIONAL: for git status
   use('github/copilot.vim')
 
+  use {'numirias/semshi', config = 'vim.cmd [[UpdateRemotePlugins]]'}
 
   use {
       'VonHeikemen/lsp-zero.nvim',
