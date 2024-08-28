@@ -28,6 +28,9 @@ vim.keymap.set("n", "Q", "<nop>")
 -- this one will find and edit all occurances of the word under the cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- fix leap motions
+require('leap').create_default_mappings()
+
 --bring me back to packer so I can install a useless plugin 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/default/packer.lua<CR>")
 

@@ -1,5 +1,6 @@
 local lsp_zero = require('lsp-zero')
 
+
 lsp_zero.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
@@ -17,12 +18,18 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'rust_analyzer', 'clangd', 'bashls'},
+  ensure_installed = {
+      'pyright',
+      'jsonls',
+      'rust_analyzer',
+      'clangd',
+      'bashls'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
       local lua_opts = lsp_zero.nvim_lua_ls()
       require('lspconfig').lua_ls.setup(lua_opts)
+      require('lspconfig').mojo.setup{}
     end,
   }
 })

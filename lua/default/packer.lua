@@ -8,13 +8,13 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use{"folke/tokyonight.nvim"}
-  use{"morhetz/gruvbox"}
+  -- use{"folke/tokyonight.nvim"}
+  use{"ellisonleao/gruvbox.nvim"}
 
   use {
       'nvim-treesitter/nvim-treesitter',
@@ -32,8 +32,11 @@ return require('packer').startup(function(use)
   use('nvim-tree/nvim-web-devicons') -- barbar dependency OPTIONAL: for file icons
   use('lewis6991/gitsigns.nvim') -- barbar dependency OPTIONAL: for git status
   use('github/copilot.vim')
+  use('catppuccin/nvim')
+  use('ggandor/leap.nvim') --godsend
+  use('folke/tokyonight.nvim')
 
-  use {'numirias/semshi', config = 'vim.cmd [[UpdateRemotePlugins]]'}
+  use {'wookayin/semshi', config = 'vim.cmd [[UpdateRemotePlugins]]'}
 
   use {
       'VonHeikemen/lsp-zero.nvim',
