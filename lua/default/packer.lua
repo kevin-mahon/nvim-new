@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
+	  'nvim-telescope/telescope.nvim', tag = '0.1.4',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
@@ -24,6 +24,8 @@ return require('packer').startup(function(use)
       end,}
 
   use('nvim-treesitter/playground')
+  use('preservim/tagbar')
+  use('liuchengxu/vim-which-key')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
@@ -35,6 +37,7 @@ return require('packer').startup(function(use)
   use('catppuccin/nvim')
   use('ggandor/leap.nvim') --godsend
   use('folke/tokyonight.nvim')
+  use('d00h/nvim-rusticated')
 
   use {'wookayin/semshi', config = 'vim.cmd [[UpdateRemotePlugins]]'}
 
